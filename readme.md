@@ -3,7 +3,7 @@
 Mở terminal và chạy lần lượt các lệnh sau:
 
 ```bash
-git clone <repository url> wise_social_socket
+git clone https://github.com/tomnguyenhieu/wise_social_socket.git wise_social_socket
 
 cd wise_social_socket
 
