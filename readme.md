@@ -1,6 +1,6 @@
 # Hướng dẫn sử dụng:
 
-Mở terminal và chạy lần lượt các lệnh sau:
+Mở git bash và chạy lần lượt các lệnh sau:
 
 ```bash
 git clone https://github.com/tomnguyenhieu/wise_social_socket.git wise_social_socket
@@ -12,6 +12,12 @@ rm -rf .git
 npm install
 
 node comment_socket.js
+```
+
+Nếu thành công sẽ thấy dòng:
+
+```
+Server is running, listen port: 3000
 ```
 
 ---
@@ -63,5 +69,5 @@ node socket_server_name.js
 Nếu thành công sẽ thấy dòng:
 
 ```
-Server is running at http://localhost:3000
+Server is running, listen port: 3000
 ```
