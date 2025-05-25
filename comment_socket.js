@@ -43,7 +43,6 @@ const io = require("socket.io")(server, {
 });
 // Initiate a new connection when there is an account connected to the server socket
 io.on("connection", (socket) => {
-	console.log("1 user connected");
 	// Listen for events when an account sends data to the server socket
 	socket.on("ClientSendMessageToServer", (requestData) => {
 		// Define room name
@@ -56,7 +55,7 @@ io.on("connection", (socket) => {
 				roomName = "room_" + requestData.room_id;
 				break;
 		}
-		switch (requestData.type) {
+		switch (requestData.action) {
 			case "join":
 				/**
 				 * Join a room, room name send from client
@@ -93,9 +92,7 @@ io.on("connection", (socket) => {
 		}
 	});
 	// Disconnect the user
-	socket.on("disconnect", (socket) => {
-		console.log("1 user disconnected");
-	});
+	socket.on("disconnect", (socket) => {});
 });
 // Init port listen
 let listenPort = 3000;
